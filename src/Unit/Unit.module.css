@@ -1,0 +1,13 @@
+.unit {
+    margin-left: 100px;
+}
+.unitHeader {
+    margin-left: 20px;
+    color: white;
+}
+
+.units {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

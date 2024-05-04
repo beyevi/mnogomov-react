@@ -1,0 +1,42 @@
+.pageHeader {
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+.sectionHeader {
+    color: white;
+    font-size: 40px;
+    text-align: center;
+}
+
+.headerCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.toMainBtn {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+.toMainBtn .link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.toMainBtn .link span {
+    display: block;
+    padding: 10px;
+}
+
+.langFlag {
+    max-height: 200px;
+    width: auto;
+}

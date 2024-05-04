@@ -1,0 +1,108 @@
+.singleQuestion {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  position: absolute;
+  margin-top: 15vh;
+}
+
+.progressBarContainer {
+    background-color: #fff;
+    width: 50%;
+    border-radius: 15px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.progressBar {
+  background-color: #5468ff;
+  color: white;
+  text-align: right;
+  font-size: 20px;
+  border-radius: 15px;
+  height: 30px;
+  width: 80%;
+}
+
+.questionBody {
+    width: 50vw;
+    height: 50vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 0 10px white;
+
+    padding: 20px;
+    border: none;
+    border-radius: 25px;
+}
+.questionField {
+    text-align: center;
+    font-size: 30px;
+    box-shadow: inset 0 0 10px black;
+    border: none;
+    border-radius: 25px
+}
+.questionAnswerOptions {
+    display: flex;
+}
+
+.answerOption, .submitButton, .navBtn {
+    margin: 10px;
+    width: 60%;
+    align-items: center;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+}
+
+.answerOption:focus, .submitButton:focus, .navBtn:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.answerOption:hover, .submitButton:hover, .navBtn:focus {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.answerOption:active, .submitButton:active, .navBtn:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.navigationButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}

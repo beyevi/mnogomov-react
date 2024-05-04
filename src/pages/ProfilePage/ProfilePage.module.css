@@ -1,0 +1,36 @@
+.profileSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.profileTitle {
+    color: white;
+}
+.userInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.profileOptions {
+    width: 50%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profOption {
+    width: 30%;
+}
+
+.linkText {
+    color: white;
+    font-style: none;
+}
+
+.linkText {
+    color: white;
+    text-decoration: none;
+}

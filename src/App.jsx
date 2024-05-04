@@ -1,21 +1,20 @@
-import Sidebar from "./Sidebar/Sidebar.jsx";
-import Lesson from "./Lesson/Lesson.jsx";
-import Unit from "./Unit/Unit.jsx";
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
+import MainPage from './pages/MainPage.jsx';
+import PracticePage from './pages/PracticePage.jsx';
+import ProfilePage from './pages/ProfilePage/ProfilePage.jsx';
 
 function App() {
 
   return (
     <>
-      <Sidebar></Sidebar>
-      <Unit></Unit>
-      <Unit></Unit>
-      <Unit></Unit>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<MainPage />} />
+          <Route path='/practice' element={<PracticePage />} />  
+          <Route path='/profile' element={<ProfilePage />} />  
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

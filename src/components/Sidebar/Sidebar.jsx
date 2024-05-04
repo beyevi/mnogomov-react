@@ -1,11 +1,13 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faFlag } from '@fortawesome/free-solid-svg-icons'
 
+import { Link } from 'react-router-dom';
+
 import styles from "./Sidebar.module.css"
 
-import ukFlag from '../assets/lang-flags/united-kingdom.png'
-import frFlag from '../assets/lang-flags/france.png'
-import uaFlag from '../assets/lang-flags/ukraine.png'
+import ukFlag from '../../assets/lang-flags/united-kingdom.png'
+import frFlag from '../../assets/lang-flags/france.png'
+import uaFlag from '../../assets/lang-flags/ukraine.png'
 
 
 function MainSidebar() {
@@ -26,11 +28,11 @@ function MainSidebar() {
             </div>
             <hr className={styles.separator}/>
             <div className={styles.navButtons}>
-                <button className={styles.navigationButton} id="to-learn-btn">Learn</button>
-                <button className={styles.navigationButton} id="to-practice-btn">Practice</button>
-                <button className={styles.navigationButton} id="to-dict-btn">Dictionary</button>
-                <button className={styles.navigationButton} id="to-profile-btn">Profile</button>
-                <button className={styles.navigationButton} id="to-about-btn">About Us</button>
+                <Link to='/' className={styles.navigationButton} id="to-learn-btn">Learn</Link>
+                <Link to='/practice' className={styles.navigationButton} id="to-practice-btn">Practice</Link>
+                <Link to='/dictionary' className={styles.navigationButton} id="to-dict-btn">Dictionary</Link>
+                <Link to='/profile' className={styles.navigationButton} id="to-profile-btn">Profile</Link>
+                <Link to='/about' className={styles.navigationButton} id="to-about-btn">About Us</Link>
             </div>
         </div>
     );

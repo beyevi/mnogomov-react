@@ -39,9 +39,9 @@ function Lesson() {
                     Ex.List <FontAwesomeIcon icon={faSortDown} />
                     <div className={styles.lessonDropdown}>
                         <ul>
-                            <li>Exercise 1 <progress max="100" value="70"></progress> <FontAwesomeIcon icon={faPlay} /></li>
-                            <li>Exercise 2 <progress max="100" value="20"></progress> <FontAwesomeIcon icon={faPlay} /></li>
-                            <li>Exercise 3 <progress max="100" value="90"></progress> <FontAwesomeIcon icon={faPlay} /></li>
+                            <li className={styles.exerciseProgress}>Exercise 1 <progress max="100" value="70"></progress> <FontAwesomeIcon icon={faPlay} /></li>
+                            <li className={styles.exerciseProgress}>Exercise 2 <progress max="100" value="20"></progress> <FontAwesomeIcon icon={faPlay} /></li>
+                            <li className={styles.exerciseProgress}>Exercise 3 <progress max="100" value="90"></progress> <FontAwesomeIcon icon={faPlay} /></li>
                         </ul>
                     </div>
                 </div>

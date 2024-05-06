@@ -1,18 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap');
-
-html, body {
-    font-family: 'Syncopate', regular;
-    height: 100%;
+.pageContainer {
+    display: flex;
+    justify-content: center; /* horizontally center */
+    align-items: center; /* vertically center */
+    height: 100vh; /* full height of the viewport */
 }
 
-.pageContainer {
-    /* max-height: 500px; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+.pageContent {
+    text-align: center; /* center the content within the page */
+    max-width: 800px; /* limit the width of the content */
+    padding: 0 20px; /* add some padding to the sides */
 }
 
 .welcomeHeader {
     color: white;
+    margin-bottom: 20px; /* add some space below the header */
+}
+
+.mascotImage {
+    border-radius: 50%;
+    margin: 30px auto; /* center the image horizontally */
+    max-width: 100%; /* ensure the image doesn't exceed its container */
+}
+
+.navBtn {
+    max-width:400px; /* limit the width of the button */
+    margin: 0 auto; /* center the button horizontally */
 }

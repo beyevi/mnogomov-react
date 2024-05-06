@@ -12,9 +12,11 @@ function WelcomePage () {
 
     return (
         <div className={styles.pageContainer}>
-            <h1 className={styles.welcomeHeader}>{mascot.welcomeMessage}</h1>
-            <img className={styles.mascotImage} src={mascot.mascotImg} alt="Mnogomov mascot" />
-            <Link to="/main"><Button type='button'>Embarque the languages!</Button></Link>
+            <div className={styles.pageContent}>
+                <h1 className={styles.welcomeHeader}>{mascot.welcomeMessage}</h1>
+                <img className={styles.mascotImage} src={mascot.mascotImg} alt="Mnogomov mascot" />
+                <Link to="/main"><Button className={styles.navBtn} type='button'>Embarque the languages!</Button></Link>
+            </div>
         </div>
     );
 }

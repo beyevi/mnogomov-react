@@ -55,13 +55,18 @@ ul {
 .lessonTips,
 .lessonList {
     text-align: center;
-    font-size: 20px;
+    font-size: 16px;
 
     height: 25px;
     border-radius: 15px;
     width: 30%;
+    padding-top: 10px;
 
     background-color: #33236d;
+}
+
+.exerciseProgress {
+    text-align: left;
 }
 
 .lessonDropdown {

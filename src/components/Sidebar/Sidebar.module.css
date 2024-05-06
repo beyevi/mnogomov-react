@@ -76,6 +76,7 @@ html, body {
 }
 
 .navigationButton {
+    font-weight: 700;
     margin: 10px;
     width: 60%;
     align-items: center;
@@ -88,7 +89,6 @@ html, body {
     color: #fff;
     cursor: pointer;
     display: inline-flex;
-    font-family: "JetBrains Mono",monospace;
     height: 48px;
     justify-content: center;
     line-height: 1;

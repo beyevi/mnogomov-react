@@ -32,7 +32,7 @@ function MainSidebar() {
                 <Link to='/practice' className={styles.navigationButton} id="to-practice-btn">Practice</Link>
                 <Link to='/dictionary' className={styles.navigationButton} id="to-dict-btn">Dictionary</Link>
                 <Link to='/profile' className={styles.navigationButton} id="to-profile-btn">Profile</Link>
-                <Link to='/about' className={styles.navigationButton} id="to-about-btn">About Us</Link>
+                {/* <Link to='/about' className={styles.navigationButton} id="to-about-btn">About Us</Link> */}
             </div>
         </div>
     );

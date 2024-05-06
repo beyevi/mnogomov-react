@@ -44,6 +44,7 @@
 .studiedWords {
     width: 100%;
     display: inline;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .singleWord {
     color: white;

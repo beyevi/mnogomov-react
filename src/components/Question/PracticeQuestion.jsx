@@ -4,13 +4,10 @@ import { Link } from 'react-router-dom';
 
 import styles from './Question.module.css';
 
-function Question () {
+function PracticeQuestion () {
     return (
         <>
             <div className={styles.singleQuestion}>
-                <div className={styles.progressBarContainer}>
-                    <div className={styles.progressBar}></div>
-                </div>
                 <div className={styles.questionBody}>
                     <div className={styles.questionField}>
                         <p>
@@ -35,11 +32,7 @@ function Question () {
                             <FontAwesomeIcon icon={faArrowLeft} /> Back to Main
                         </span>
                     </Link>
-                    <Link to="/main" className={styles.navBtn} id="finish-later-btn">
-                        <span className={styles.btnContent}>
-                            Finish Later
-                        </span>
-                    </Link>
+
                     <Link to="/practice" className={styles.navBtn} id="skip-question-btn">
                         <span className={styles.btnContent}>
                             Skip Question <FontAwesomeIcon icon={faArrowRight} />
@@ -50,4 +43,4 @@ function Question () {
     );
 }
 
-export default Question;
+export default PracticeQuestion;

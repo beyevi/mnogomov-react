@@ -82,7 +82,7 @@ function DictionaryPage () {
                 <div className={styles.headerCenter}>
                     <h1 className={styles.sectionHeader}>Your personal dictionary</h1>
                     <Button className={styles.toMainBtn} type='button'>
-                        <Link className={styles.link} to='/'>
+                        <Link className={styles.link} to='/main'>
                             <span>Back to Main</span>
                         </Link>
                     </Button>

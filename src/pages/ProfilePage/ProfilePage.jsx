@@ -31,7 +31,7 @@ function ProfilePage () {
                     </Link>
                 </Button>
                 <Button className={styles.profOption} type='button'>
-                    <Link className={styles.linkText} to='/'>
+                    <Link className={styles.linkText} to='/main'>
                         Back to Main
                     </Link>
                 </Button>

@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap');
+
+html, body {
+    font-family: 'Syncopate', regular;
+}
+
 .mainSidebar {
     height: 100%;
     width: 15%;

@@ -28,7 +28,7 @@ function MainSidebar() {
             </div>
             <hr className={styles.separator}/>
             <div className={styles.navButtons}>
-                <Link to='/' className={styles.navigationButton} id="to-learn-btn">Learn</Link>
+                {/* <Link to='/' className={styles.navigationButton} id="to-learn-btn">Learn</Link> */}
                 <Link to='/practice' className={styles.navigationButton} id="to-practice-btn">Practice</Link>
                 <Link to='/dictionary' className={styles.navigationButton} id="to-dict-btn">Dictionary</Link>
                 <Link to='/profile' className={styles.navigationButton} id="to-profile-btn">Profile</Link>

@@ -3,6 +3,8 @@
 html, body {
     font-family: 'Syncopate', regular;
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .profileSection {
@@ -10,11 +12,15 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    background-color: #282c34;
+    min-height: 100vh;
 }
 
 .profileTitle {
     color: white;
+    font-size: 2rem;
 }
+
 .userInfo {
     display: flex;
     flex-direction: column;
@@ -24,20 +30,26 @@ html, body {
 
 .profileOptions {
     width: 50%;
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .profOption {
     width: 30%;
-}
-
-.linkText {
-    color: white;
-    font-style: none;
+    margin: 10px 0;
 }
 
 .linkText {
     color: white;
     text-decoration: none;
+}
+
+.usernameInput {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 10px;
 }

@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlay, faSortDown } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom';
 
 import styles from './Lesson.module.css'
 
@@ -12,7 +13,9 @@ function Lesson() {
                     <h1>Lesson #1</h1>
                     <h2>Lesson Name</h2>
                 </div>
-                <FontAwesomeIcon className={styles.beginIcon} icon={faPlay} />
+                <Link to='/main/lesson'>
+                    <FontAwesomeIcon className={styles.beginIcon} icon={faPlay} />
+                </Link>
             </div>
             <div className={styles.lessonOptions}>
                 <div className={styles.lessonAbout}>

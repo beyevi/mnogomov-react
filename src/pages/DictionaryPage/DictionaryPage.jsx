@@ -1,79 +1,13 @@
 import React, { useState, useEffect } from 'react';
-
-import styles from './DictionaryPage.module.css'
-
-import ukFlag from '../../assets/lang-flags/united-kingdom.png'
-import uaFlag from '../../assets/lang-flags/ukraine.png'
-
+import { useDictionary } from '../../context/DictionaryContext'; // Import the context
+import styles from './DictionaryPage.module.css';
+import ukFlag from '../../assets/lang-flags/united-kingdom.png';
+import uaFlag from '../../assets/lang-flags/ukraine.png';
 import Button from '../../components/Button/Button.jsx';
 import { Link } from 'react-router-dom';
 
-async function translateToUA(word) {
-    const url = 'https://google-translation-unlimited.p.rapidapi.com/translate';
-    const options = {
-        method: 'POST',
-        headers: {
-            'content-type': 'application/x-www-form-urlencoded',
-            'X-RapidAPI-Key': 'f00a56a03fmshb59ec5f0f1c92b6p1e1854jsnae98d6e68873',
-            'X-RapidAPI-Host': 'google-translation-unlimited.p.rapidapi.com'
-        },
-        body: new URLSearchParams({
-            texte: `${word}`,
-            to_lang: 'uk'
-        })
-    };
-
-    try {
-        const response = await fetch(url, options);
-        const result = await response.json();
-        console.log(result);
-        return result.translation_data.translation;
-    } catch (error) {
-        console.error(error);
-    }
-}
-
-async function getEngIPA(word) {
-    const url = `https://wordsapiv1.p.rapidapi.com/words/${word}/pronunciation`;
-    const options = {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Key': 'f00a56a03fmshb59ec5f0f1c92b6p1e1854jsnae98d6e68873',
-            'X-RapidAPI-Host': 'wordsapiv1.p.rapidapi.com'
-        }
-    };
-
-    try {
-        const response = await fetch(url, options);
-        const result = await response.json();
-        console.log(result);
-        return result.pronunciation.all;
-    } catch (error) {
-        console.error(error);
-    }
-}
-
-function DictionaryPage () {
-    const [words, setWords] = useState([]);
-
-    useEffect(() => {
-        async function fetchData() {
-            const wordsToFetch = ['hello', 'morning', 'breakfast']; // Array of words to fetch
-            const fetchedWords = await Promise.all(
-                wordsToFetch.map(async (word) => {
-                    const uaTranslation = await translateToUA(word);
-                    const engPronunciation = await getEngIPA(word);
-                    return {
-                        word,
-                        uaTranslation,
-                        engPronunciation
-                    };
-                })
-            );
-            setWords(fetchedWords);
-        }
-        fetchData();
-    }, []);
+function DictionaryPage() {
+    const { words } = useDictionary(); // Use the context
 
     return (
         <div>
@@ -87,7 +21,7 @@ function DictionaryPage () {
                         </Link>
                     </Button>
                 </div>
-                 <img className={styles.langFlag} src={uaFlag} alt="ukraininan" />
+                <img className={styles.langFlag} src={uaFlag} alt="ukrainian" />
             </div>
             <hr />
             <div className={styles.studiedWords}>

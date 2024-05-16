@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import styles from './ProfilePage.module.css';
-import Button from '../../components/Button/Button.jsx';
+import Button from '../../components/Button/Button';
+import UsernameChangePopup from '../../components/UsernameChangePopup/UsernameChangePopup';
 
 function ProfilePage() {
     const [userInfo, setUserInfo] = useState({
@@ -12,6 +13,7 @@ function ProfilePage() {
     const [isEditing, setIsEditing] = useState(false);
     const [isEditingAvatar, setIsEditingAvatar] = useState(false);
     const [newUsername, setNewUsername] = useState(userInfo.username);
+    const [showUsernamePopup, setShowUsernamePopup] = useState(false);
 
     const handleEditClick = () => {
         setIsEditing(true);
@@ -46,6 +48,18 @@ function ProfilePage() {
             };
             reader.readAsDataURL(file);
         }
+    };
+
+    const handleCloseUsernamePopup = () => {
+        setShowUsernamePopup(false);
+    };
+
+    const handleSaveUsername = (newUsername) => {
+        setUserInfo(prevState => ({
+            ...prevState,
+            username: newUsername
+        }));
+        setShowUsernamePopup(false); // Close the popup after saving
     };
 
     return (
@@ -96,6 +110,12 @@ function ProfilePage() {
                     </Link>
                 </Button>
             </div>
+            {showUsernamePopup && (
+                <UsernameChangePopup
+                    onClose={handleCloseUsernamePopup}
+                    onSave={handleSaveUsername}
+                />
+            )}
         </div>
     );
 }

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 .singleQuestion {
   width: 100%;
   display: flex;
@@ -52,6 +54,7 @@
 }
 
 .answerOption, .submitButton, .navBtn {
+  
     margin: 10px;
     width: 60%;
     align-items: center;
@@ -64,7 +67,8 @@
     color: #fff;
     cursor: pointer;
     display: inline-flex;
-    font-family: "JetBrains Mono",monospace;
+    font-family: "Balsamiq Sans", sans-serif;
+    font-weight: 400;
     height: 48px;
     justify-content: center;
     line-height: 1;
@@ -120,7 +124,8 @@
     color: #fff;
     cursor: pointer;
     display: inline-flex;
-    font-family: "JetBrains Mono",monospace;
+    font-family: "Balsamiq Sans", sans-serif;
+    font-weight: 400;
     height: 48px;
     justify-content: center;
     line-height: 1;

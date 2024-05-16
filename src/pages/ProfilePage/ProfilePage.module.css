@@ -5,6 +5,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    caret-color: transparent;
 }
 
 .profileSection {
@@ -57,4 +58,10 @@ html, body {
 .fileInput {
     margin-top: 10px;
     color: white;
+}
+
+.avatar {
+    border-radius: 50%;
+    height: 400px;
+    width: 400px;
 }

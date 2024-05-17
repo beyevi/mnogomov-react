@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faFlag } from '@fortawesome/free-solid-svg-icons'
 
@@ -11,6 +12,12 @@ import uaFlag from '../../assets/lang-flags/ukraine.png'
 
 
 function MainSidebar() {
+    const [selectedFlag, setSelectedFlag] = useState(ukFlag);
+
+    const handleFlagClick = (flag) => {
+        setSelectedFlag(flag);
+    };
+
     return (
         <div className={styles.mainSidebar}>
             <div className={styles.infoPart}>
@@ -18,11 +25,12 @@ function MainSidebar() {
                     <FontAwesomeIcon className={styles.faIcon} icon={faUser} />
                 </div>
                 <div className={styles.langFlag}>
-                    <FontAwesomeIcon className={styles.faIcon} icon={faFlag} />
+                    {/* <FontAwesomeIcon className={styles.faIcon} icon={faFlag} /> */}
+                    <img className={styles.selectedFlag} src={selectedFlag} alt="Selected Language" />
                     <div className={styles.langDropdown}>
-                        <img className={styles.langFlagOption} src={ukFlag} id="eng-option" alt="English" />
-                        <img className={styles.langFlagOption} src={frFlag} id="fr-option" alt="French" />
-                        <img className={styles.langFlagOption} src={uaFlag} id="ukr-option" alt="Ukrainian" />
+                        <img className={styles.langFlagOption} src={ukFlag} id="eng-option" alt="English" onClick={() => handleFlagClick(ukFlag)}/>
+                        <img className={styles.langFlagOption} src={frFlag} id="fr-option" alt="French" onClick={() => handleFlagClick(frFlag)}/>
+                        <img className={styles.langFlagOption} src={uaFlag} id="ukr-option" alt="Ukrainian" onClick={() => handleFlagClick(uaFlag)}/>
                     </div> 
                 </div>
             </div>

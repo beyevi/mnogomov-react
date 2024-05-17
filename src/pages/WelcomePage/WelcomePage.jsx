@@ -7,7 +7,7 @@ import styles from './WelcomePage.module.css';
 function WelcomePage () {
     const [mascot] = useState({
         welcomeMessage: 'Welcome to Mnogomov!',
-        mascotImg: './public/mnogomov-french.svg'
+        mascotImg: '/mnogomov-french.svg'
     });
 
     return (
